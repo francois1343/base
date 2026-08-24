@@ -24,7 +24,7 @@ h1, h2, p {
 }
 
 h1 {
-    color: #1d4ed8;
+    color: #dfb84c;
     font-size: clamp(2rem, 7vw, 3.4rem);
     letter-spacing: -0.06em;
 }
@@ -33,7 +33,7 @@ h1 {
     padding: 0.8rem 1.2rem;
     border: 0;
     border-radius: 10px;
-    background: #1d4ed8;
+    background: #20bd81;
     color: #ffffff;
     box-shadow: 0 6px 14px rgba(29, 78, 216, 0.25);
     cursor: pointer;

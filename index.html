@@ -2,18 +2,22 @@
 <html lang="fr">
 
 <head>
+    <!-- Encodage et affichage adaptatif sur mobile. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA</title>
     <link rel="icon" href="/favicon.ico">
+    <!-- Point d'entrée JavaScript, chargé comme module. -->
     <script type="module" src="main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Informations nécessaires à l'installation de la PWA. -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#FF0000">
 </head>
 
 <body>
     <h1>Une démo PWA</h1>
+    <!-- Caché par défaut ; JavaScript l'affiche lorsque l'installation est disponible. -->
     <button class="hidden" id="install">Installer l'app</button>
     <hr>
     <h2>Voyage</h2>
