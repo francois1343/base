@@ -3,6 +3,7 @@
   "short_name": "First PWA",
   "start_url": "index.html",
   "display": "minimal-ui",
+  "theme_color": "#FF0000",
   "icons": [
     {
       "src": "/icons/favicon-16x16.png",
