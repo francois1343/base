@@ -1,27 +1,15 @@
-//Install
-const installBtn = document.querySelector('#install')
-let defferedPrompt = null
+import { installApp } from './js/install.js'
+import { Register } from './js/register-sw.js'
 
-window.addEventListener('beforeinstallprompt', event => {
-  event.preventDefault()
-  defferedPrompt = event
-  installBtn.classList.remove('hidden')
-  installBtn.addEventListener('click', installApp)
-})
+installApp()
 
-const installApp = () => {
-  defferedPrompt.prompt()
-  installBtn.classList.add('hidden')
+Register()
 
-  //wait user choice
-  defferedPrompt.userChoice.then(choiceResult => {
-    console.log(choiceResult)
-    if (choiceResult.outcome === 'accepted') {
-      installBtn.classList.add('hidden')
-    }
-    else {
-      console.log('PWA rejected')
-    }
-    defferedPrompt = null
-  })
+//mode actuel
+const isPWA =
+  window.matchMedia('(display-mode: standalone)').matches ||
+  window.matchMedia('(display-mode: minimal-ui)').matches
+
+if (isPWA) {
+  //alert('pwa')
 }

@@ -2,9 +2,9 @@
   "name": "Ma première PWA",
   "short_name": "First PWA",
   "start_url": "index.html",
-  "display": "minimal-ui",
+  "display": "standalone",
   "theme_color": "#FF0000",
-  "backgroun_color": "#FF0000",
+  "background_color": "#FF0000",
   "prefer_related_applications": false,
   "icons": [
     {
@@ -26,6 +26,12 @@
       "src": "/icons/favicon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
+    },
+    {
+      "src": "/icons/favicon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
