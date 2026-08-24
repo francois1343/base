@@ -4,6 +4,7 @@
   "start_url": "index.html",
   "display": "minimal-ui",
   "theme_color": "#FF0000",
+  "backgroun_color": "#FF0000",
   "icons": [
     {
       "src": "/icons/favicon-16x16.png",
@@ -24,6 +25,22 @@
       "src": "/icons/favicon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/cap01.png",
+      "type": "image/png",
+      "sizes": "500x876",
+      "form_factor": "narrow",
+      "label": "Acceuil Mobile"
+    },
+    {
+      "src": "/screenshots/cap02.png",
+      "type": "image/png",
+      "sizes": "1279x874",
+      "form_factor": "wide",
+      "label": "Acceuil Desktop"
     }
   ]
 }
