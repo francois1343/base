@@ -5,6 +5,7 @@
   "display": "minimal-ui",
   "theme_color": "#FF0000",
   "backgroun_color": "#FF0000",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/icons/favicon-16x16.png",
