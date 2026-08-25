@@ -7,14 +7,14 @@ import { notifyMe, notifRequest } from './js/notifications.js'
 installApp()
 
 // Enregistre le service worker pour activer le cache hors ligne.
-//Register()
+Register()
 
 // Demande à l’utilisateur l’autorisation d’afficher des notifications.
-notifRequest()
+//notifRequest()
 
 // Attend 10 secondes (10 000 millisecondes), puis lance la notification.
 setTimeout(() => {
-  notifyMe()
+  //notifyMe()
 }, 10000)
 
 // Vérifie si l'application est ouverte en tant que PWA installée.

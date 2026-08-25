@@ -85,6 +85,7 @@ const networkFirst = async (request) => {
   }
 }
 
+/*
 self.addEventListener('fetch', e => {
   // Les ressources d'extensions (chrome-extension://) ne peuvent pas être mises en cache.
   const url = new URL(e.request.url);
@@ -105,4 +106,33 @@ self.addEventListener('fetch', e => {
       networkFirst(e.request)
     )
   }
+}) */
+
+//add push notif
+self.addEventListener('push', e => {
+  if (!(self.Notification && self.Notification.permission == "granted")) {
+    return
+  }
+  console.log('push notif ok')
+  const data = e.data?.json() ?? {}
+  const title = data.title || "Titre par défaut"
+  const url = data.url || "https://cepegra.be"
+  const message = data.message || "Message par défaut"
+  const icon = data.icon || "./icons/favicon-96x96.png"
+
+  const notification = registration.showNotification(title, {
+    body: message,
+    tag: "simple-push-demo",
+    icon,
+    data: {
+      url
+    }
+  })
+})
+
+self.addEventListener('notificationclick', e => {
+  e.notification.close()
+  e.waitUntil(
+    clients.openWindow(e.notification.data.url)
+  )
 })
